@@ -149,25 +149,56 @@
                     <div class="catalog-item__wrapper">
                         <div class="catalog-item__content catalog-item__content_active">
                             <img src="img/timer1.png" alt="pulsometr" class="catalog-item__img">
-                            <div class="catalog-item__subtitle">Пульсометр Polar FT1</div>
-                            <div class="catalog-item__descr">Для первых шагов в тренировках, основанных на сердечном ритме</div>
-                            <a href="#" class="catalog-item__link">ПОДРОБНЕЕ</a>
+                            <div class="catalog-item__subtitle">Space</div>
+                            <div class="catalog-item__descr">Это моя первая игра. Наверное многие начинают именно с нее. Все спрайты с инета оттуда и большая часть кода. Я дописывал только High Score (без него совсем не интересно), уничтожение корабля, музыка кстати моя. </div>
+                            <a href="#" class="catalog-item__link">ПРИМЕРЫ КОДА</a>
                         </div>
-                        <ul class="catalog-item__list"> 
-                            <li>Оповещение о нужном пульсе во время тренировки;</li>
-                            <li>Вы увидите информативный графический индикатор целевых тренировочных зон пульса;</li>
-                            <li>Также Вы увидите информацию о расходе калорий за тренировку;</li>
-                            <li>Вы сможете посмотреть данные по 10 тренировкам.</li>
+                        <div class="catalog-item__list"> 
+                            <textarea class="catalog-item__list"> 
+                                using System.Collections;
+                                using System.Collections.Generic;
+                                using UnityEngine;
+                                using UnityEngine.UI;
+
+                                public class HiScore : MonoBehaviour
+                                {
+                                    static public int score = 100; 
+
+                                    // Если в PlayerPrefs есть HighScore  считываем , иначе записыаем
+                                    private void Awake()
+                                    {
+                                         if (PlayerPrefs.HasKey("HighScore"))
+                                        {
+                                             score = PlayerPrefs.GetInt("HighScore");
+                                         }
+                                         PlayerPrefs.SetInt("HighScore", score);
+                                     }
+                                
+                                    // Update is called once per frame
+                                    void Update()
+                                    {
+                                     //Выводим на экран
+                                        Text gt = gameObject.GetComponent<Text>();
+                                        gt.text = "High Score: " + score;
+
+                                        //score увеличивается в другом скрипте здесь пишем её значение в PlayerPrefs если она больше чем HighScore
+                                         if(score > PlayerPrefs.GetInt("HighScore"))
+                                        {
+                                            PlayerPrefs.SetInt("HighScore", score);
+                                        }
+                                    }
+                                }
+
+                            </textarea>
+                            
                             <a href="" class="catalog-item__back">НАЗАД</a>
-                        </ul>
+                        </div>    
+                        
                     </div>
                     <hr>
                     <div class="catalog-item__footer">
-                        <div class="catalog-item__prices">
-                            <div class="catalog-item__old-price">4 750 руб.</div>
-                            <div class="catalog-item__new-price">4 500 руб.</div>
-                        </div>
-                        <button class="button button_mini">КУПИТЬ</button>
+                        
+                        <button class="button button_mini">СМОТРЕТЬ</button>
                     </div>
                 </div>
                 <div class="catalog-item">
@@ -179,7 +210,7 @@
                             <a href="" class="catalog-item__link">ПОДРОБНЕЕ</a>
                         </div>
                         <ul class="catalog-item__list"> 
-                            <li>Оповещение о нужном пульсе во время тренировки;</li>
+                            <li>Текст 2</li>
                             <li>Вы увидите информативный графический индикатор целевых тренировочных зон пульса;</li>
                             <li>Также Вы увидите информацию о расходе калорий за тренировку;</li>
                             <li>Вы сможете посмотреть данные по 10 тренировкам.</li>
@@ -204,7 +235,7 @@
                             <a href="#" class="catalog-item__link">ПОДРОБНЕЕ</a>
                         </div>
                         <ul class="catalog-item__list"> 
-                            <li>Оповещение о нужном пульсе во время тренировки;</li>
+                            <li>Текст 3</li>
                             <li>Вы увидите информативный графический индикатор целевых тренировочных зон пульса;</li>
                             <li>Также Вы увидите информацию о расходе калорий за тренировку;</li>
                             <li>Вы сможете посмотреть данные по 10 тренировкам.</li>
@@ -229,7 +260,7 @@
                             <a href="" class="catalog-item__link">ПОДРОБНЕЕ</a>
                         </div>
                         <ul class="catalog-item__list"> 
-                            <li>Оповещение о нужном пульсе во время тренировки;</li>
+                            <li>Текст 4</li>
                             <li>Вы увидите информативный графический индикатор целевых тренировочных зон пульса;</li>
                             <li>Также Вы увидите информацию о расходе калорий за тренировку;</li>
                             <li>Вы сможете посмотреть данные по 10 тренировкам.</li>
@@ -254,7 +285,7 @@
                             <a href="" class="catalog-item__link">ПОДРОБНЕЕ</a>
                         </div>
                         <ul class="catalog-item__list"> 
-                            <li>Оповещение о нужном пульсе во время тренировки;</li>
+                            <li>Текст 5</li>
                             <li>Вы увидите информативный графический индикатор целевых тренировочных зон пульса;</li>
                             <li>Также Вы увидите информацию о расходе калорий за тренировку;</li>
                             <li>Вы сможете посмотреть данные по 10 тренировкам.</li>
@@ -279,7 +310,7 @@
                             <a href="" class="catalog-item__link">ПОДРОБНЕЕ</a>
                         </div>
                         <ul class="catalog-item__list"> 
-                            <li>Оповещение о нужном пульсе во время тренировки;</li>
+                            <li>Текст 6</li>
                             <li>Вы увидите информативный графический индикатор целевых тренировочных зон пульса;</li>
                             <li>Также Вы увидите информацию о расходе калорий за тренировку;</li>
                             <li>Вы сможете посмотреть данные по 10 тренировкам.</li>
@@ -306,7 +337,7 @@
                             <a href="#" class="catalog-item__link">ПОДРОБНЕЕ</a>
                         </div>
                         <ul class="catalog-item__list"> 
-                            <li>Оповещение о нужном пульсе во время тренировки;</li>
+                            <li>Текст 7</li>
                             <li>Вы увидите информативный графический индикатор целевых тренировочных зон пульса;</li>
                             <li>Также Вы увидите информацию о расходе калорий за тренировку;</li>
                             <li>Вы сможете посмотреть данные по 10 тренировкам.</li>
@@ -333,7 +364,7 @@
                             <a href="#" class="catalog-item__link">ПОДРОБНЕЕ</a>
                         </div>
                         <ul class="catalog-item__list"> 
-                            <li>Оповещение о нужном пульсе во время тренировки;</li>
+                            <li>Текст 8</li>
                             <li>Вы увидите информативный графический индикатор целевых тренировочных зон пульса;</li>
                             <li>Также Вы увидите информацию о расходе калорий за тренировку;</li>
                             <li>Вы сможете посмотреть данные по 10 тренировкам.</li>
@@ -358,7 +389,7 @@
                             <a href="#" class="catalog-item__link">ПОДРОБНЕЕ</a>
                         </div>
                         <ul class="catalog-item__list"> 
-                            <li>Оповещение о нужном пульсе во время тренировки;</li>
+                            <li>Тест 9</li>
                             <li>Вы увидите информативный графический индикатор целевых тренировочных зон пульса;</li>
                             <li>Также Вы увидите информацию о расходе калорий за тренировку;</li>
                             <li>Вы сможете посмотреть данные по 10 тренировкам.</li>

@@ -155,6 +155,7 @@
     width: 131px;
     height: 40px;
     font-size: 14px;
+    margin-left: 60px;
 }
 .second {
     min-height: 470px;
@@ -419,10 +420,25 @@
     margin-bottom: 21px;
     border-bottom: none;
 }
+.catalog-item__a {
+   margin-left: 65px;
+   color: red;
+   margin-top: 20px;
+   text-decoration: underline;
+}
+
+
+
 .catalog-item__footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+.catalog-item__footer a {
+    justify-content: center;
+    text-decoration: underline;
+    color: red;
+    margin-left: 75px;
 }
 .catalog-item__old-price {
     color: #555;
@@ -438,11 +454,6 @@
 .catalog-item__wrapper {
     display: flex;
     width: calc(200% + 40px);
-}
-.catalog-item textarea{
-    width: 240px;
-    height: 400px;
-   
 }
 .catalog-item__content {
     transition: 0.5s all;
@@ -602,7 +613,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 380px;
+    width: 880px;
     min-height: 400px;
     background-color: #f2f2f2;
     padding: 38px 39px 38px 39px;
@@ -624,8 +635,8 @@
 }
 .modal__descr {
     color: #0d0d0d;
-    font-size: 14px;
-    font-weight: 500;
+    font-size: 18px;
+    font-weight: 700;
     text-align: center;
 }
 .modal_mini {

@@ -148,263 +148,178 @@
                 <div class="catalog-item">
                     <div class="catalog-item__wrapper">
                         <div class="catalog-item__content catalog-item__content_active">
-                            <img src="img/timer1.png" alt="pulsometr" class="catalog-item__img">
+                            <img src="img/space.jpg" alt="space" class="catalog-item__img">
                             <div class="catalog-item__subtitle">Space</div>
-                            <div class="catalog-item__descr">Это моя первая игра. Наверное многие начинают именно с нее. Все спрайты с инета оттуда и большая часть кода. Я дописывал только High Score (без него совсем не интересно), уничтожение корабля, музыка кстати моя. </div>
-                            <a href="#" class="catalog-item__link">ПРИМЕРЫ КОДА</a>
+                            <div class="catalog-item__descr">Это моя первая игра. Наверное многие начинают именно с нее. Все спрайты с инета оттуда и большая часть кода. Я дописывал только High Score (без него совсем не интересно), уничтожение корабля, музыка кстати моя. Код допотопный и тяжелый, но это первый опыт.</div>
+                            <a href="#example"class="catalog-item__a"> ПРИМЕРЫ КОДА</a>
                         </div>
                         <div class="catalog-item__list"> 
-                            <textarea class="catalog-item__list"> 
-                                using System.Collections;
-                                using System.Collections.Generic;
-                                using UnityEngine;
-                                using UnityEngine.UI;
-
-                                public class HiScore : MonoBehaviour
-                                {
-                                    static public int score = 100; 
-
-                                    // Если в PlayerPrefs есть HighScore  считываем , иначе записыаем
-                                    private void Awake()
-                                    {
-                                         if (PlayerPrefs.HasKey("HighScore"))
-                                        {
-                                             score = PlayerPrefs.GetInt("HighScore");
-                                         }
-                                         PlayerPrefs.SetInt("HighScore", score);
-                                     }
-                                
-                                    // Update is called once per frame
-                                    void Update()
-                                    {
-                                     //Выводим на экран
-                                        Text gt = gameObject.GetComponent<Text>();
-                                        gt.text = "High Score: " + score;
-
-                                        //score увеличивается в другом скрипте здесь пишем её значение в PlayerPrefs если она больше чем HighScore
-                                         if(score > PlayerPrefs.GetInt("HighScore"))
-                                        {
-                                            PlayerPrefs.SetInt("HighScore", score);
-                                        }
-                                    }
-                                }
-
-                            </textarea>
-                            
                             <a href="" class="catalog-item__back">НАЗАД</a>
                         </div>    
                         
                     </div>
                     <hr>
+                    
                     <div class="catalog-item__footer">
                         
-                        <button class="button button_mini">СМОТРЕТЬ</button>
+                        <a href="https://youtu.be/yTNxGmZaaOk">СМОТРЕТЬ</a>
+                        
                     </div>
                 </div>
                 <div class="catalog-item">
                     <div class="catalog-item__wrapper">
                         <div class="catalog-item__content catalog-item__content_active">
-                            <img src="img/timer1.png" alt="pulsometr" class="catalog-item__img">
-                            <div class="catalog-item__subtitle">Пульсометр Suunto M2</div>
-                            <div class="catalog-item__descr">Пульсометр начального уровня с комфортным тканевым ремешком</div>
-                            <a href="" class="catalog-item__link">ПОДРОБНЕЕ</a>
+                            <img src="img/space.jpg" alt="space" class="catalog-item__img">
+                            <div class="catalog-item__subtitle">Space</div>
+                            <div class="catalog-item__descr">Это моя первая игра. Наверное многие начинают именно с нее. Все спрайты с инета оттуда и большая часть кода. Я дописывал только High Score (без него совсем не интересно), уничтожение корабля, музыка кстати моя. Код допотопный и тяжелый, но это первый опыт.</div>
+                            <a href="#example"class="catalog-item__a"> ПРИМЕРЫ КОДА</a>
                         </div>
-                        <ul class="catalog-item__list"> 
-                            <li>Текст 2</li>
-                            <li>Вы увидите информативный графический индикатор целевых тренировочных зон пульса;</li>
-                            <li>Также Вы увидите информацию о расходе калорий за тренировку;</li>
-                            <li>Вы сможете посмотреть данные по 10 тренировкам.</li>
-                            <a href="#" class="catalog-item__back">НАЗАД</a>
-                        </ul>
-                    </div>
-                    <hr>
-                    <div class="catalog-item__footer">
-                        <div class="catalog-item__prices">
-                            <div class="catalog-item__old-price">6 990 руб.</div>
-                            <div class="catalog-item__new-price">6 641 руб.</div>
-                        </div>
-                        <button class="button button_mini">КУПИТЬ</button>
-                    </div>
-                </div>
-                <div class="catalog-item">
-                    <div class="catalog-item__wrapper">
-                        <div class="catalog-item__content catalog-item__content_active">
-                            <img src="img/timer1.png" alt="pulsometr" class="catalog-item__img">
-                            <div class="catalog-item__subtitle">Пульсометр Polar FT4</div>
-                            <div class="catalog-item__descr">Улучшенная версия Polar FT1, имеющая следующие улучшения:</div>
-                            <a href="#" class="catalog-item__link">ПОДРОБНЕЕ</a>
-                        </div>
-                        <ul class="catalog-item__list"> 
-                            <li>Текст 3</li>
-                            <li>Вы увидите информативный графический индикатор целевых тренировочных зон пульса;</li>
-                            <li>Также Вы увидите информацию о расходе калорий за тренировку;</li>
-                            <li>Вы сможете посмотреть данные по 10 тренировкам.</li>
+                        <div class="catalog-item__list"> 
                             <a href="" class="catalog-item__back">НАЗАД</a>
-                        </ul>
+                        </div>    
+                        
                     </div>
                     <hr>
+                    
                     <div class="catalog-item__footer">
-                        <div class="catalog-item__prices">
-                            <div class="catalog-item__old-price">7 390 руб.</div>
-                            <div class="catalog-item__new-price">7 021 руб.</div>
-                        </div>
-                        <button class="button button_mini">КУПИТЬ</button>
+                        
+                        <a href="https://youtu.be/yTNxGmZaaOk">СМОТРЕТЬ</a>
+                        
                     </div>
                 </div>
                 <div class="catalog-item">
                     <div class="catalog-item__wrapper">
                         <div class="catalog-item__content catalog-item__content_active">
-                            <img src="img/timer1.png" alt="pulsometr" class="catalog-item__img">
-                            <div class="catalog-item__subtitle">Пульсометр Polar FT1</div>
-                            <div class="catalog-item__descr">Для первых шагов в тренировках, основанных на сердечном ритме</div>
-                            <a href="" class="catalog-item__link">ПОДРОБНЕЕ</a>
+                            <img src="img/space.jpg" alt="space" class="catalog-item__img">
+                            <div class="catalog-item__subtitle">Space</div>
+                            <div class="catalog-item__descr">Это моя первая игра. Наверное многие начинают именно с нее. Все спрайты с инета оттуда и большая часть кода. Я дописывал только High Score (без него совсем не интересно), уничтожение корабля, музыка кстати моя. Код допотопный и тяжелый, но это первый опыт.</div>
+                            <a href="#example"class="catalog-item__a"> ПРИМЕРЫ КОДА</a>
                         </div>
-                        <ul class="catalog-item__list"> 
-                            <li>Текст 4</li>
-                            <li>Вы увидите информативный графический индикатор целевых тренировочных зон пульса;</li>
-                            <li>Также Вы увидите информацию о расходе калорий за тренировку;</li>
-                            <li>Вы сможете посмотреть данные по 10 тренировкам.</li>
-                            <a href="#" class="catalog-item__back">НАЗАД</a>
-                        </ul>
+                        <div class="catalog-item__list"> 
+                            <a href="" class="catalog-item__back">НАЗАД</a>
+                        </div>    
+                        
                     </div>
                     <hr>
+                    
                     <div class="catalog-item__footer">
-                        <div class="catalog-item__prices">
-                            <div class="catalog-item__old-price">4 750 руб.</div>
-                            <div class="catalog-item__new-price">4 500 руб.</div>
-                        </div>
-                        <button class="button button_mini">КУПИТЬ</button>
+                        
+                        <a href="https://youtu.be/yTNxGmZaaOk">СМОТРЕТЬ</a>
+                        
                     </div>
                 </div>
-                <div class="catalog-item">
-                    <div class="catalog-item__wrapper">
-                        <div class="catalog-item__content catalog-item__content_active">
-                            <img src="img/timer1.png" alt="pulsometr" class="catalog-item__img">
-                            <div class="catalog-item__subtitle">Пульсометр Polar FT1</div>
-                            <div class="catalog-item__descr">Для первых шагов в тренировках, основанных на сердечном ритме</div>
-                            <a href="" class="catalog-item__link">ПОДРОБНЕЕ</a>
-                        </div>
-                        <ul class="catalog-item__list"> 
-                            <li>Текст 5</li>
-                            <li>Вы увидите информативный графический индикатор целевых тренировочных зон пульса;</li>
-                            <li>Также Вы увидите информацию о расходе калорий за тренировку;</li>
-                            <li>Вы сможете посмотреть данные по 10 тренировкам.</li>
-                            <a href="#" class="catalog-item__back">НАЗАД</a>
-                        </ul>
-                    </div>
-                    <hr>
-                    <div class="catalog-item__footer">
-                        <div class="catalog-item__prices">
-                            <div class="catalog-item__old-price">4 750 руб.</div>
-                            <div class="catalog-item__new-price">4 500 руб.</div>
-                        </div>
-                        <button class="button button_mini">КУПИТЬ</button>
-                    </div>
-                </div>
-                <div class="catalog-item">
-                    <div class="catalog-item__wrapper">
-                        <div class="catalog-item__content catalog-item__content_active">
-                            <img src="img/timer1.png" alt="pulsometr" class="catalog-item__img">
-                            <div class="catalog-item__subtitle">Пульсометр Polar FT1</div>
-                            <div class="catalog-item__descr">Для первых шагов в тренировках, основанных на сердечном ритме</div>
-                            <a href="" class="catalog-item__link">ПОДРОБНЕЕ</a>
-                        </div>
-                        <ul class="catalog-item__list"> 
-                            <li>Текст 6</li>
-                            <li>Вы увидите информативный графический индикатор целевых тренировочных зон пульса;</li>
-                            <li>Также Вы увидите информацию о расходе калорий за тренировку;</li>
-                            <li>Вы сможете посмотреть данные по 10 тренировкам.</li>
-                            <a href="#" class="catalog-item__back">НАЗАД</a>
-                        </ul>
-                    </div>
-                    <hr>
-                    <div class="catalog-item__footer">
-                        <div class="catalog-item__prices">
-                            <div class="catalog-item__old-price">4 750 руб.</div>
-                            <div class="catalog-item__new-price">4 500 руб.</div>
-                        </div>
-                        <button class="button button_mini">КУПИТЬ</button>
-                    </div>
-                </div>
+               
             </div>
             <div class="catalog__content">
                 <div class="catalog-item">
                     <div class="catalog-item__wrapper">
                         <div class="catalog-item__content catalog-item__content_active">
-                            <img src="img/timer1.png" alt="pulsometr" class="catalog-item__img">
-                            <div class="catalog-item__subtitle">Пульсометр Polar FT1</div>
-                            <div class="catalog-item__descr">Для первых шагов в тренировках, основанных на сердечном ритме</div>
-                            <a href="#" class="catalog-item__link">ПОДРОБНЕЕ</a>
+                            <img src="img/space.jpg" alt="space" class="catalog-item__img">
+                            <div class="catalog-item__subtitle">Space</div>
+                            <div class="catalog-item__descr">Это моя первая игра. Наверное многие начинают именно с нее. Все спрайты с инета оттуда и большая часть кода. Я дописывал только High Score (без него совсем не интересно), уничтожение корабля, музыка кстати моя. Код допотопный и тяжелый, но это первый опыт.</div>
+                            <a href="#example"class="catalog-item__a"> ПРИМЕРЫ КОДА</a>
                         </div>
-                        <ul class="catalog-item__list"> 
-                            <li>Текст 7</li>
-                            <li>Вы увидите информативный графический индикатор целевых тренировочных зон пульса;</li>
-                            <li>Также Вы увидите информацию о расходе калорий за тренировку;</li>
-                            <li>Вы сможете посмотреть данные по 10 тренировкам.</li>
+                        <div class="catalog-item__list"> 
                             <a href="" class="catalog-item__back">НАЗАД</a>
-                        </ul>
+                        </div>    
+                        
                     </div>
                     <hr>
+                    
                     <div class="catalog-item__footer">
-                        <div class="catalog-item__prices">
-                            <div class="catalog-item__old-price">4 750 руб.</div>
-                            <div class="catalog-item__new-price">4 500 руб.</div>
-                        </div>
-                        <button class="button button_mini">КУПИТЬ</button>
+                        
+                        <a href="https://youtu.be/yTNxGmZaaOk">СМОТРЕТЬ</a>
+                        
                     </div>
                 </div>
+                <div class="catalog-item">
+                    <div class="catalog-item__wrapper">
+                        <div class="catalog-item__content catalog-item__content_active">
+                            <img src="img/space.jpg" alt="space" class="catalog-item__img">
+                            <div class="catalog-item__subtitle">Space</div>
+                            <div class="catalog-item__descr">Это моя первая игра. Наверное многие начинают именно с нее. Все спрайты с инета оттуда и большая часть кода. Я дописывал только High Score (без него совсем не интересно), уничтожение корабля, музыка кстати моя. Код допотопный и тяжелый, но это первый опыт.</div>
+                            <a href="#example"class="catalog-item__a"> ПРИМЕРЫ КОДА</a>
+                        </div>
+                        <div class="catalog-item__list"> 
+                            <a href="" class="catalog-item__back">НАЗАД</a>
+                        </div>    
+                        
+                    </div>
+                    <hr>
+                    
+                    <div class="catalog-item__footer">
+                        
+                        <a href="https://youtu.be/yTNxGmZaaOk">СМОТРЕТЬ</a>
+                        
+                    </div>
+                </div>
+                <div class="catalog-item">
+                    <div class="catalog-item__wrapper">
+                        <div class="catalog-item__content catalog-item__content_active">
+                            <img src="img/space.jpg" alt="space" class="catalog-item__img">
+                            <div class="catalog-item__subtitle">Space</div>
+                            <div class="catalog-item__descr">Это моя первая игра. Наверное многие начинают именно с нее. Все спрайты с инета оттуда и большая часть кода. Я дописывал только High Score (без него совсем не интересно), уничтожение корабля, музыка кстати моя. Код допотопный и тяжелый, но это первый опыт.</div>
+                            <a href="#example"class="catalog-item__a"> ПРИМЕРЫ КОДА</a>
+                        </div>
+                        <div class="catalog-item__list"> 
+                            <a href="" class="catalog-item__back">НАЗАД</a>
+                        </div>    
+                        
+                    </div>
+                    <hr>
+                    
+                    <div class="catalog-item__footer">
+                        
+                        <a href="https://youtu.be/yTNxGmZaaOk">СМОТРЕТЬ</a>
+                        
+                    </div>
+                </div>
+                
             </div>
             <div class="catalog__content">
                 <div class="catalog-item">
                     <div class="catalog-item__wrapper">
                         <div class="catalog-item__content catalog-item__content_active">
-                            <img src="img/timer1.png" alt="pulsometr" class="catalog-item__img">
-                            <div class="catalog-item__subtitle">Пульсометр Polar FT1</div>
-                            <div class="catalog-item__descr">Для первых шагов в тренировках, основанных на сердечном ритме</div>
-                            <a href="#" class="catalog-item__link">ПОДРОБНЕЕ</a>
+                            <img src="img/space.jpg" alt="space" class="catalog-item__img">
+                            <div class="catalog-item__subtitle">Space</div>
+                            <div class="catalog-item__descr">Это моя первая игра. Наверное многие начинают именно с нее. Все спрайты с инета оттуда и большая часть кода. Я дописывал только High Score (без него совсем не интересно), уничтожение корабля, музыка кстати моя. Код допотопный и тяжелый, но это первый опыт.</div>
+                            <a href="#example"class="catalog-item__a"> ПРИМЕРЫ КОДА</a>
                         </div>
-                        <ul class="catalog-item__list"> 
-                            <li>Текст 8</li>
-                            <li>Вы увидите информативный графический индикатор целевых тренировочных зон пульса;</li>
-                            <li>Также Вы увидите информацию о расходе калорий за тренировку;</li>
-                            <li>Вы сможете посмотреть данные по 10 тренировкам.</li>
+                        <div class="catalog-item__list"> 
                             <a href="" class="catalog-item__back">НАЗАД</a>
-                        </ul>
+                        </div>    
+                        
                     </div>
                     <hr>
+                    
                     <div class="catalog-item__footer">
-                        <div class="catalog-item__prices">
-                            <div class="catalog-item__old-price">4 750 руб.</div>
-                            <div class="catalog-item__new-price">4 500 руб.</div>
-                        </div>
-                        <button class="button button_mini">КУПИТЬ</button>
+                        
+                        <a href="https://youtu.be/yTNxGmZaaOk">СМОТРЕТЬ</a>
+                        
                     </div>
                 </div>
                 <div class="catalog-item">
                     <div class="catalog-item__wrapper">
                         <div class="catalog-item__content catalog-item__content_active">
-                            <img src="img/timer1.png" alt="pulsometr" class="catalog-item__img">
-                            <div class="catalog-item__subtitle">Пульсометр Polar FT1</div>
-                            <div class="catalog-item__descr">Для первых шагов в тренировках, основанных на сердечном ритме</div>
-                            <a href="#" class="catalog-item__link">ПОДРОБНЕЕ</a>
+                            <img src="img/space.jpg" alt="space" class="catalog-item__img">
+                            <div class="catalog-item__subtitle">Space</div>
+                            <div class="catalog-item__descr">Это моя первая игра. Наверное многие начинают именно с нее. Все спрайты с инета оттуда и большая часть кода. Я дописывал только High Score (без него совсем не интересно), уничтожение корабля, музыка кстати моя. Код допотопный и тяжелый, но это первый опыт.</div>
+                            <a href="#example"class="catalog-item__a"> ПРИМЕРЫ КОДА</a>
                         </div>
-                        <ul class="catalog-item__list"> 
-                            <li>Тест 9</li>
-                            <li>Вы увидите информативный графический индикатор целевых тренировочных зон пульса;</li>
-                            <li>Также Вы увидите информацию о расходе калорий за тренировку;</li>
-                            <li>Вы сможете посмотреть данные по 10 тренировкам.</li>
+                        <div class="catalog-item__list"> 
                             <a href="" class="catalog-item__back">НАЗАД</a>
-                        </ul>
+                        </div>    
+                        
                     </div>
                     <hr>
+                    
                     <div class="catalog-item__footer">
-                        <div class="catalog-item__prices">
-                            <div class="catalog-item__old-price">4 750 руб.</div>
-                            <div class="catalog-item__new-price">4 500 руб.</div>
-                        </div>
-                        <button class="button button_mini">КУПИТЬ</button>
+                        
+                        <a href="https://youtu.be/yTNxGmZaaOk">СМОТРЕТЬ</a>
+                        
                     </div>
                 </div>
+               
             </div>
         </div>
     </section>
@@ -443,6 +358,72 @@
             
         </div>
     </section>
+    <section class="feedback" id="example">
+        <div class="container">
+            <h2 class="title title__feedback">ПРИМЕРЫ КОДА</h2>
+            <div class="feedback__content wow fadeInUp  data-wow-duration='2s'  data-wow-delay='1s'">
+                <img src="img/space.jpg" alt="space" class="feedback__img">
+                <div class="feedback__descr">
+                    <h4 class="feedback__info">
+                        using System.Collections;<br>
+                        using System.Collections.Generic;<br>
+                        using UnityEngine;<br>
+                        using UnityEngine.UI;<br>
+                        <br>
+                        public class HiScore : MonoBehaviour<br>
+                        {<br>
+                            static public int score = 100; <br>
+                            <br>
+                            // Если в PlayerPrefs есть HighScore  считываем , иначе записыаем<br>
+                            private void Awake()<br>
+                            {<br>
+                                if (PlayerPrefs.HasKey("HighScore"))<br>
+                                {<br>
+                                    score = PlayerPrefs.GetInt("HighScore");<br>
+                                }<br>
+                                PlayerPrefs.SetInt("HighScore", score);<br>
+                            }<br>
+                            
+                            // Update is called once per frame<br>
+                            void Update()<br>
+                            {<br>
+                                //Выводим на экран<br>
+                                Text gt = gameObject.GetComponent<Text>();<br>
+                                gt.text = "High Score: " + score;<br>
+                        
+                                //score увеличивается в другом скрипте здесь пишем её значение в PlayerPrefs если она больше чем HighScore<br>
+                                if(score > PlayerPrefs.GetInt("HighScore"))<br>
+                                {<br>
+                                    PlayerPrefs.SetInt("HighScore", score);<br>
+                                }<br>
+                            }<br>
+                        }
+                    </h4>
+                   
+
+                    
+
+                </div>
+            </div>
+            
+            <div class="feedback__content wow fadeInUp data-wow-duration='2s' data-wow-delay='1s'">
+                <img src="icons/i.webp" alt="ivan semochkin" class="feedback__img">
+                <div class="feedback__descr">
+                    <h3 class="feedback__name">Опыт работы</h3>
+                    <h4 class="feedback__info">1996 - 2021 гг.</h4>
+                    За 25 лет успел поработать на всех уровнях. Начинал в 1996 учеником электро-слесаря КИПиА на ГРЭС. Затем, долгое время, работал инженером наладчиком систем промышленной автоматизации. Программировал промышленные контроллеры Siemens, Direct Logic и др. Около пяти лет, работал в Москве директором службы эксплуатации крупного бизнес центра.
+                    <br>
+                    <br>            
+                    В итоге нашел дело, которое мне безумно нравится и которым я готов заниматься 25 часов в сутки. Разработкой игр на Unity занимаюсь около года. Прошел все обучающие курсы Unity Learn, помогло хорошее знание английского языка. Буду благодарен за возможность получить новый опыт и знания в этой области. 
+
+
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    
     
     <div class="overlay">
         <div class="modal" id="consultation">
@@ -458,13 +439,10 @@
         </div>
         <div class="modal" id="order">
             <div class="modal__close"> &times; </div>
-            <div class="modal__subtitle">Ваш заказ:</div>
+            <div class="modal__subtitle"></div>
             <div class="modal__descr">Пульсометр Polar FT1</div>
             <form class="feed-form feed-form_mt25" action="#">
-                <input name="name" required placeholder="Ваше имя" type="text">
-                <input name="phone" required placeholder="Ваш телефон">
-                <input name="email" required placeholder="Ваш E-mail" type="email">
-                <button class="button button_submit">Купить</button>
+                
             </form>
         </div>
         <div class="modal modal_mini" id="thanks">

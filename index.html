@@ -67,7 +67,7 @@
                             <li>Физика, столкновения;</li>
                             <li>Анимация и система частиц;</li>
                             <li>Активно пользуюсь GIT;</li>
-                            <li>Опыт командной работы;</li>
+                            <li>Blender;</li>
                             <li>Знание HTML5 и CSS;</li>
                             <li>Хорошее знание английского языка</li>
                             
@@ -124,10 +124,10 @@
         <div class="container">
             <div class="carousel__inner">
                 <div>
-                    <img src="img/slider1.png" alt="slider1">
+                    <img src="img/space3D.png" alt="slider1">
                 </div>
                 <div>
-                    <img src="img/slider2.png" alt="slider2">
+                    <img src="img/space.jpg" alt="slider2">
                 </div>
                 <div>
                     <img src="img/slider3.png" alt="slider3">
@@ -149,7 +149,7 @@
                     <div class="catalog-item__wrapper">
                         <div class="catalog-item__content catalog-item__content_active">
                             <img src="img/space.jpg" alt="space" class="catalog-item__img">
-                            <div class="catalog-item__subtitle">Space</div>
+                            <div class="catalog-item__subtitle">Space 04/2019</div>
                             <div class="catalog-item__descr">Это моя первая игра. Наверное многие начинают именно с нее. Все спрайты с инета оттуда и большая часть кода. Я дописывал только High Score (без него совсем не интересно), уничтожение корабля, музыка кстати моя. Код допотопный и тяжелый, но это первый опыт.</div>
                             <a href="#example"class="catalog-item__a"> ПРИМЕРЫ КОДА</a>
                         </div>
@@ -280,10 +280,10 @@
                 <div class="catalog-item">
                     <div class="catalog-item__wrapper">
                         <div class="catalog-item__content catalog-item__content_active">
-                            <img src="img/space.jpg" alt="space" class="catalog-item__img">
-                            <div class="catalog-item__subtitle">Space</div>
-                            <div class="catalog-item__descr">Это моя первая игра. Наверное многие начинают именно с нее. Все спрайты с инета оттуда и большая часть кода. Я дописывал только High Score (без него совсем не интересно), уничтожение корабля, музыка кстати моя. Код допотопный и тяжелый, но это первый опыт.</div>
-                            <a href="#example"class="catalog-item__a"> ПРИМЕРЫ КОДА</a>
+                            <img src="img/space3D.png" alt="space3D" class="catalog-item__img">
+                            <div class="catalog-item__subtitle">Space3D 11/2019</div>
+                            <div class="catalog-item__descr">Первая игра под андроид. Модели корабля и станции делал сам, для чего пришлось изучать Blender. Код не оптимизирован,но работает в Андроиде адекватно.</div>
+                            <a href="#example1"class="catalog-item__a"> ПРИМЕРЫ КОДА</a>
                         </div>
                         <div class="catalog-item__list"> 
                             <a href="" class="catalog-item__back">НАЗАД</a>
@@ -358,10 +358,11 @@
             
         </div>
     </section>
-    <section class="feedback" id="example">
+    <section class="feedback" >
         <div class="container">
             <h2 class="title title__feedback">ПРИМЕРЫ КОДА</h2>
-            <div class="feedback__content wow fadeInUp  data-wow-duration='2s'  data-wow-delay='1s'">
+            
+            <div class="feedback__content wow fadeInUp  data-wow-duration='2s'  data-wow-delay='1s'" id="example">
                 <img src="img/space.jpg" alt="space" class="feedback__img">
                 <div class="feedback__descr">
                     <h4 class="feedback__info">
@@ -405,20 +406,139 @@
 
                 </div>
             </div>
-            
-            <div class="feedback__content wow fadeInUp data-wow-duration='2s' data-wow-delay='1s'">
-                <img src="icons/i.webp" alt="ivan semochkin" class="feedback__img">
+            <div class="feedback__content wow fadeInUp  data-wow-duration='2s'  data-wow-delay='1s'" id="example1">
+                <img src="img/space3D.png" alt="space3В" class="feedback__img">
                 <div class="feedback__descr">
-                    <h3 class="feedback__name">Опыт работы</h3>
-                    <h4 class="feedback__info">1996 - 2021 гг.</h4>
-                    За 25 лет успел поработать на всех уровнях. Начинал в 1996 учеником электро-слесаря КИПиА на ГРЭС. Затем, долгое время, работал инженером наладчиком систем промышленной автоматизации. Программировал промышленные контроллеры Siemens, Direct Logic и др. Около пяти лет, работал в Москве директором службы эксплуатации крупного бизнес центра.
-                    <br>
-                    <br>            
-                    В итоге нашел дело, которое мне безумно нравится и которым я готов заниматься 25 часов в сутки. Разработкой игр на Unity занимаюсь около года. Прошел все обучающие курсы Unity Learn, помогло хорошее знание английского языка. Буду благодарен за возможность получить новый опыт и знания в этой области. 
+                    <h4 class="feedback__info">
+                        using System.Collections; <br>
+                        using System.Collections.Generic;<br>
+                        using UnityEngine;<br>
+                        using UnityEngine.UI;<br>
 
+                        public class GameManager : Singleton<|GameManager|> </text> <br>
+                        {<br>
+                            [Header("Set in Inspector")]<br>
+                            public GameObject shipPrefab;<br>
+                            public Transform shipStartPoint;<br>
+                            public GameObject currentShip { get; private set; }<br>
+
+                            public GameObject spaceStationPrefab;<br>
+                            public Transform stationStartPoint;<br>
+                            public GameObject currentStation { get; private set; }<br>
+
+                            [Header("Set dinamycally")]<br>
+
+                            public SmoothFollow cameraFolow;<br>
+                            public GameObject gameOverUI;<br>
+                            public GameObject mainMenuUI;<br>
+                            public GameObject pausedUI;<br>
+                            public GameObject inGameUI;<br>
+
+                            public bool isGamePlayed { get; private set; }<br>
+
+                            public AsteroidSpawner asteroidSpawner;<br>
+
+                            public bool paused;<br>
+
+
+
+                            // Start is called before the first frame update
+                            void Start()<br>
+                            {<br>
+                                ShowMainMenu();<br>
+                            }<br>
+
+                            void ShowUI(GameObject newUI) //деактивирует все окна кроме полученного<br>
+                            {<br>
+                                GameObject[] allUI = { mainMenuUI, inGameUI, pausedUI, gameOverUI };<br>
+                                foreach(GameObject uiToHide in allUI)<br>
+                                {<br>
+                                    uiToHide.SetActive(false);<br>
+                                }<br>
+
+                                newUI.SetActive(true);<br>
+                            }<br>
+
+                            public void ShowMainMenu() //заставка<br>
+                            {<br>
+                                ShowUI(mainMenuUI);<br>
+                                isGamePlayed = false;<br>
+                                asteroidSpawner.isSpawnAsteroids = false;<br>
+                            }<br>
+
+                            public void StartGame() //при нажатии кнопки старт игры в заставке стартует игра<br>
+                            {<br>
+                                ShowUI(inGameUI);<br>
+                                isGamePlayed = true;<br>
+                                if(currentShip!= null)<br>
+                                {<br>
+                                    Destroy(currentShip);<br> 
+                                }<br>
+                                if(currentStation != null) <br>
+                                {<br>
+                                    Destroy(currentStation);<br>
+                                }<br>
+
+                                currentShip = Instantiate(shipPrefab);<br>
+                                currentShip.transform.position = shipStartPoint.position;<br>
+                                currentShip.transform.rotation = shipStartPoint.rotation;<br>
+
+                                currentStation = Instantiate(spaceStationPrefab);<br>
+                                currentStation.transform.position = stationStartPoint.position;<br>
+                                currentStation.transform.rotation = stationStartPoint.rotation;<br>
+
+                                cameraFolow.target = currentShip.transform;<br>
+                                asteroidSpawner.isSpawnAsteroids = true;<br>
+                                asteroidSpawner.target = currentStation.transform;<br>
+                                <br>
+
+                                
+                            }<br>
+
+                            public void GameOver()//конец игры вызывается при разрушении станции<br>
+                            {<br>
+                                ShowUI(gameOverUI);<br>
+                                isGamePlayed = false;<br>
+                                if(currentShip != null)<br>
+                                {<br>
+                                    Destroy(currentShip);<br>
+                                }<br>
+                                if(currentStation != null)<br>
+                                {<br>
+                                    Destroy(currentStation);<br>
+                                }<br>
+
+                                asteroidSpawner.isSpawnAsteroids = false;<br>
+                                asteroidSpawner.DestroyAllAsteroids();<br>
+
+                            }<br>
+
+                            public void SetPaused(bool paused) //пауза<br>
+                            {<br>
+                                inGameUI.SetActive(!paused);<br>
+                                pausedUI.SetActive(paused);<br>
+                                if (paused)<br>
+                                {<br>
+                                    Time.timeScale = 0.0f;<br>
+                                }<br>
+                                else<br>
+                                {<br>
+                                    Time.timeScale = 1.0f;<br>
+                                }<br>
+                            }<br>
+
+                            
+                        }<br>
+
+                    </h4>
+                   
+
+                    
 
                 </div>
             </div>
+            
+            
             
         </div>
     </section>

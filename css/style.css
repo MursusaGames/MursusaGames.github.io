@@ -421,10 +421,12 @@
     border-bottom: none;
 }
 .catalog-item__a {
-   margin-left: 65px;
+   display: flex ;
+   justify-content: center;
    color: red;
    margin-top: 20px;
    text-decoration: underline;
+   
 }
 
 
@@ -438,7 +440,7 @@
     justify-content: center;
     text-decoration: underline;
     color: red;
-    margin-left: 75px;
+    margin-left: 85px;
 }
 .catalog-item__old-price {
     color: #555;
@@ -519,6 +521,11 @@
     justify-content: left;
     margin-top: 100px;
 }
+.feedback__img__1{
+    width: 370px;
+    height: 250px;
+}
+
 .feedback__img {
     width: 169px;
     height: 169px;

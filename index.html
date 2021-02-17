@@ -67,8 +67,8 @@
                             <li>Физика, столкновения;</li>
                             <li>Анимация и система частиц;</li>
                             <li>Активно пользуюсь GIT;</li>
-                            <li>Blender;</li>
-                            <li>Знание HTML5 и CSS;</li>
+                            <li>Blender, Photoshop;</li>
+                            <li>Знание HTML5 и CSS, PHP, Java;</li>
                             <li>Хорошее знание английского языка</li>
                             
                         </ul>
@@ -130,7 +130,7 @@
                     <img src="img/space.jpg" alt="slider2">
                 </div>
                 <div>
-                    <img src="img/slider3.png" alt="slider3">
+                    <img src="img/pukaphoto.png" alt="slider3">
                 </div>
               </div>
         </div>
@@ -301,10 +301,10 @@
                 <div class="catalog-item">
                     <div class="catalog-item__wrapper">
                         <div class="catalog-item__content catalog-item__content_active">
-                            <img src="img/space.jpg" alt="space" class="catalog-item__img">
-                            <div class="catalog-item__subtitle">Space</div>
-                            <div class="catalog-item__descr">Это моя первая игра. Наверное многие начинают именно с нее. Все спрайты с инета оттуда и большая часть кода. Я дописывал только High Score (без него совсем не интересно), уничтожение корабля, музыка кстати моя. Код допотопный и тяжелый, но это первый опыт.</div>
-                            <a href="#example"class="catalog-item__a"> ПРИМЕРЫ КОДА</a>
+                            <img src="img/pukaphoto.png" alt="puka" class="catalog-item__img">
+                            <div class="catalog-item__subtitle">Pukosyaba</div>
+                            <div class="catalog-item__descr">Сделал игру в виде тренировки, больше упор делал на код поэтому графика простая. Весь код полностью писал сам игра для детеи пукосяба их игрушка. Собрал 20 уровнеи, разного направлени рисование, логические задачи, использование акселемометра и т.д. Здесь меню на двух языках, кнопки звука и вибрации. Система уровнеи. Игру можно скачать. </div>
+                            <a href="https://disk.yandex.ru/d/IBC-k-2Sf4QrAA"class="catalog-item__a"> Скачать</a>
                         </div>
                         <div class="catalog-item__list"> 
                             <a href="" class="catalog-item__back">НАЗАД</a>
@@ -316,6 +316,27 @@
                     <div class="catalog-item__footer">
                         
                         <a href="https://youtu.be/yTNxGmZaaOk">СМОТРЕТЬ</a>
+                        
+                    </div>
+                </div>
+                <div class="catalog-item">
+                    <div class="catalog-item__wrapper">
+                        <div class="catalog-item__content catalog-item__content_active">
+                            <img src="img/runner.png" alt="space" class="catalog-item__img">
+                            <div class="catalog-item__subtitle">Runner</div>
+                            <div class="catalog-item__descr">Собрал раннер простенькии за для ради тренировки. Было интересно собрать такую игру и поиграть на своем смартфоне.</div>
+                            <a href="#example2"class="catalog-item__a"> ПРИМЕРЫ КОДА</a>
+                        </div>
+                        <div class="catalog-item__list"> 
+                            <a href="" class="catalog-item__back">НАЗАД</a>
+                        </div>    
+                        
+                    </div>
+                    <hr>
+                    
+                    <div class="catalog-item__footer">
+                        
+                        <a href="https://youtu.be/CYpuhCwP_vM">СМОТРЕТЬ</a>
                         
                     </div>
                 </div>
@@ -349,12 +370,18 @@
                     <h4 class="feedback__info">1996 - 2021 гг.</h4>
                     За 25 лет успел поработать на всех уровнях. Начинал в 1996 учеником электро-слесаря КИПиА на ГРЭС. Затем, долгое время, работал инженером наладчиком систем промышленной автоматизации. Программировал промышленные контроллеры Siemens, Direct Logic и др. Около пяти лет, работал в Москве директором службы эксплуатации крупного бизнес центра.
                     <br>
+                    Заинтересовало программирование изучал HTML и CSS, Java, Phyton, C#. Но все это показалось в итоге довольно скучным делом стал искать дальше.
                     <br>            
                     В итоге нашел дело, которое мне безумно нравится и которым я готов заниматься 25 часов в сутки. Разработкой игр на Unity занимаюсь около года. Прошел все обучающие курсы Unity Learn, помогло хорошее знание английского языка. Буду благодарен за возможность получить новый опыт и знания в этой области. 
 
 
                 </div>
             </div>
+            <img src="img/java/java-1.png" alt="sertificat" class="feedback__img__1">
+            <img src="img/web/web-1.png" alt="sertificat" class="feedback__img__1">
+            <img src="img/bootstrap/bootstrap-1.png" alt="sertificat" class="feedback__img__1">
+            <img src="img/html/html-1.png" alt="sertificat" class="feedback__img__1">
+            <img src="img/php/php-1.png" alt="sertificat" class="feedback__img__1">
             
         </div>
     </section>
@@ -529,6 +556,116 @@
 
                             
                         }<br>
+
+                    </h4>
+                   
+
+                    
+
+                </div>
+            </div>
+            <div class="feedback__content wow fadeInUp  data-wow-duration='2s'  data-wow-delay='1s'" id="example2">
+                <img src="img/runner.png" alt="space3В" class="feedback__img">
+                <div class="feedback__descr">
+                    <h4 class="feedback__info">
+                        
+                        using System.Collections;<br>
+                        using System.Collections.Generic;<br>
+                        using UnityEngine;<br>
+                        using UnityEngine.EventSystems;<br>
+                        <br>
+                            public class Player : MonoBehaviour, IDragHandler, IBeginDragHandler<br>
+                            {<br>
+
+                                public float speed = 5.0f;<br>
+                                public float step = 1.3f;<br>
+                                public float jumpHeight = 2.5f;<br>
+                                public bool isLeft = true;<br>
+                                public GameObject player;<br>
+
+
+                                
+                                
+
+                                void TurnUp()<br>
+                                {<br>
+                                    Vector3 playerPos = player.transform.position;<br>
+                                    if (playerPos.y < 0.5f)<br>
+                                    {<br>
+                                        playerPos.y = jumpHeight;<br>
+                                        player.transform.position = playerPos;<br>
+                                    }<br>
+
+
+                                }<br>
+
+                                public void OnBeginDrag(PointerEventData eventData)<br>
+                                {<br>
+
+                                    Vector2 delta = eventData.delta; //фиксируем дельту тачеи<br>
+
+                                    if (Mathf.Abs(delta.x) > Mathf.Abs(delta.y)) //тач по горизонтали<br>
+                                    {<br>
+                                        if (delta.x > 0)  //свеип вправо<br>
+                                        {<br>
+                                            TurnRight();<br>
+                                            
+                                        }<br>
+                                        else //свеип влево<br>
+                                        {<br>
+                                            TurnLeft();<br>
+                                            
+                                        }<br>
+                                    }<br>
+                                    else //тач по вертикали<br>
+                                    {<br>
+                                        if (delta.y > 0) //свеип вверх<br>
+                                        {<br>
+                                            TurnUp();<br>
+                                           
+                                        }<br>
+                                        else<br>
+                                        {<br>
+                                            Debug.Log("Down");<br>
+                                        }<br>
+
+                                    }<br>
+                                }<br>
+
+                                public void OnDrag(PointerEventData eventData)<br>
+                                {<br>
+                                
+                                }     <br>
+
+                                void TurnLeft()<br>
+                                {<br>
+                                    if (!isLeft)<br>
+                                    {<br>
+                                        Vector3 playerPos = player.transform.position;<br>
+                                        playerPos.x = -step;<br>
+                                        player.transform.position = playerPos;<br>
+                                        isLeft = true;<br>
+                                    }<br>
+                                }<br>
+
+                                void TurnRight()<br>
+                                {<br>
+
+                                    if (isLeft)<br>
+                                    {<br>
+                                        Vector3 playerPos = player.transform.position;<br>
+                                        playerPos.x = step;<br>
+                                        player.transform.position = playerPos;<br>
+                                        isLeft = false;<br>
+                                    }<br>
+                                }<br>
+                            
+
+                            }<br>
+                        
+
+
+
 
                     </h4>
                    

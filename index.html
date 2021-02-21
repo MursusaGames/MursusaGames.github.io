@@ -215,10 +215,10 @@
                 <div class="catalog-item">
                     <div class="catalog-item__wrapper">
                         <div class="catalog-item__content catalog-item__content_active">
-                            <img src="img/space.jpg" alt="space" class="catalog-item__img">
+                            <img src="img/tanks.png" alt="space" class="catalog-item__img">
                             <div class="catalog-item__subtitle">Tanks</div>
-                            <div class="catalog-item__descr">Это моя первая игра. Наверное многие начинают именно с нее. Все спрайты с инета оттуда и большая часть кода. Я дописывал только High Score (без него совсем не интересно), уничтожение корабля, музыка кстати моя. Код допотопный и тяжелый, но это первый опыт.</div>
-                            <a href="#example"class="catalog-item__a"> ПРИМЕРЫ КОДА</a>
+                            <div class="catalog-item__descr">Люблю танчики поэтому делаю потихоньку ля себя , пока игру с танками нав меш, ии, механика - интересно.</div>
+                            <a href="#example4"class="catalog-item__a"> ПРИМЕРЫ КОДА</a>
                         </div>
                         <div class="catalog-item__list"> 
                             <a href="" class="catalog-item__back">НАЗАД</a>
@@ -229,7 +229,7 @@
                     
                     <div class="catalog-item__footer">
                         
-                        <a href="https://youtu.be/yTNxGmZaaOk">СМОТРЕТЬ</a>
+                        <a href="https://youtu.be/iYY-MzQdBWs">СМОТРЕТЬ</a>
                         
                     </div>
                 </div>
@@ -731,6 +731,84 @@
                         
 
 
+
+
+                    </h4>
+                   
+
+                    
+
+                </div>
+            </div>
+            <div class="feedback__content wow fadeInUp  data-wow-duration='2s'  data-wow-delay='1s'" id="example4">
+                <img src="img/PIKA.png" alt="pika" class="feedback__img">
+                <div class="feedback__descr">
+                    <h4 class="feedback__info">
+                        
+                        using System.Collections;<br>
+                        using System.Collections.Generic;<br>
+                        using UnityEngine;<br>
+
+                        public class Enemy : MonoBehaviour<br>
+                        {<br>
+
+                            [Header("Fire Block")]<br>
+                            public GameObject bulletPrefab;<br>
+                            public GameObject explosionPrefab;<br>
+                            public bool isFire = true;<br>
+                            public float timeBetwenFire = 9f;<br>
+                            public float stopFire;<br>
+
+                            public Transform thisTransform;<br>
+                            GameObject target;<br>
+                            public float rotationSpeed = 100f;<br>
+
+                            private void Awake()<br>
+                            {<br>
+                                thisTransform = GetComponent<Transform>();<br>
+                                target = GameObject.FindGameObjectWithTag("Player");<br>
+                            }<br>
+                            
+                            IEnumerator TrackRotation(GameObject target)<br>
+                            {<br>
+                                while (true)<br>
+                                {<br>
+                                    if(thisTransform != null && target != null)<br>
+                                    {<br>
+                                        Vector3 relativePos = target.transform.position - thisTransform.position;<br>
+                                        Quaternion newRotation = Quaternion.LookRotation(relativePos);<br>
+                                        thisTransform.rotation = Quaternion.RotateTowards(thisTransform.rotation, newRotation, rotationSpeed * Time.deltaTime);<br>
+                                        yield return null;<br>
+                                    }<br>
+                                }<br>
+                            }<br>
+
+                            
+                            void Update()<br>
+                            {<br>
+                                StartCoroutine(TrackRotation(target));<br>
+                                #region Время между выстрелами<br>
+                                if (isFire == false) //время между выстрелами<br>
+                                {<br>
+                                    stopFire -= Time.deltaTime;<br>
+                                    if (stopFire <= 0)<br>
+                                    {<br>
+                                        isFire = true;<br>
+                                        stopFire = timeBetwenFire;<br>
+                                    }<br>
+
+                                }<br>
+                                #endregion<br>
+                                #region Выстрел<br>
+                                if (isFire)<br>
+                                {<br>
+                                    Instantiate(bulletPrefab, startBulletPosition.transform.position, startBulletPosition.transform.rotation);<br>
+                                    Instantiate(explosionPrefab, startBulletPosition.transform.position, startBulletPosition.transform.rotation);<br>
+                                    isFire = false;<br>
+                                }<br>
+                                #endregion<br>
+                            }<br>
+                        }<br>
 
 
                     </h4>

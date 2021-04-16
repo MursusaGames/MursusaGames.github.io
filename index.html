@@ -62,14 +62,14 @@
                     <div class="second__descr">
                         <ul class="second__descr__list"> 
                             <li>Ответственость;</li>
-                            <li>Хорошее знание С#;</li>
-                            <li>Знание интерфейса Unity;</li>
-                            <li>Физика, столкновения;</li>
-                            <li>Анимация и система частиц;</li>
+                            <li>Хорошее знание С#, понимание принципов чистого кода;</li>
+                            <li>Паттерны проектирования С#, архитектура приложения, диаграммы классов;</li>
+                            <li>Рефакторинг кода, повышение производительности приложения;</li>
+                            <li>Хорошие знания Unity, шейдеры(граф), частицы, аннимация.</li>
                             <li>Активно пользуюсь GIT;</li>
                             <li>Blender, Photoshop;</li>
-                            <li>Знание HTML5 и CSS, PHP, Java;</li>
-                            <li>Хорошее знание английского языка</li>
+                            <li>Знание HTML5 и CSS, PHP, Java, С++;</li>
+                            <li>Хорошее знание технического английского языка</li>
                             
                         </ul>
                     </div>
@@ -330,13 +330,17 @@
                     <h4 class="feedback__info">1996 - 2021 гг.</h4>
                     За 25 лет успел поработать на всех уровнях. Начинал в 1996 учеником электро-слесаря КИПиА на ГРЭС. Затем, долгое время, работал инженером наладчиком систем промышленной автоматизации. Программировал промышленные контроллеры Siemens, Direct Logic и др. Около пяти лет, работал в Москве директором службы эксплуатации крупного бизнес центра.
                     <br>
-                    Заинтересовало программирование изучал HTML и CSS, Java, Phyton, C#. Но все это показалось в итоге довольно скучным делом стал искать дальше.
+                    Заинтересовало программирование изучал HTML и CSS, Java, Phyton, C#. Программирование очень нравится, особнно в его игровои разновидности.
                     <br>            
-                    В итоге нашел дело, которое мне безумно нравится и которым я готов заниматься 25 часов в сутки. Разработкой игр на Unity занимаюсь около года. Прошел все обучающие курсы Unity Learn, помогло хорошее знание английского языка. Буду благодарен за возможность получить новый опыт и знания в этой области. 
+                    В итоге я нашел дело, которое мне безумно нравится и которым я готов заниматься 25 часов в сутки. Разработкой игр на Unity занимаюсь около года. Прошел все обучающие курсы на Unity.com, помогло хорошее знание английского языка. несколько дополнительных платных курсов по Unity и С# (сертификаты ниже)Буду благодарен за возможность получить новый опыт и знания в этой области. 
 
 
                 </div>
             </div>
+            <img src="img/c#.jpg" alt="sertificat" class="feedback__img__1">
+            <img src="img/Unity start.jpg" alt="sertificat" class="feedback__img__1">
+            <img src="img/Unity +.jpg" alt="sertificat" class="feedback__img__1">
+            <img src="img/c++.jpg" alt="sertificat" class="feedback__img__1">
             <img src="img/java/java-1.png" alt="sertificat" class="feedback__img__1">
             <img src="img/web/web-1.png" alt="sertificat" class="feedback__img__1">
             <img src="img/bootstrap/bootstrap-1.png" alt="sertificat" class="feedback__img__1">
@@ -353,39 +357,78 @@
                 <img src="img/space.jpg" alt="space" class="feedback__img">
                 <div class="feedback__descr">
                     <h4 class="feedback__info">
-                        using System.Collections;<br>
-                        using System.Collections.Generic;<br>
                         using UnityEngine;<br>
                         using UnityEngine.UI;<br>
-                        <br>
-                        public class HiScore : MonoBehaviour<br>
-                        {<br>
-                            static public int score = 100; <br>
-                            <br>
-                            // Если в PlayerPrefs есть HighScore  считываем , иначе записыаем<br>
-                            private void Awake()<br>
-                            {<br>
-                                if (PlayerPrefs.HasKey("HighScore"))<br>
-                                {<br>
-                                    score = PlayerPrefs.GetInt("HighScore");<br>
-                                }<br>
-                                PlayerPrefs.SetInt("HighScore", score);<br>
-                            }<br>
-                            
-                            // Update is called once per frame<br>
-                            void Update()<br>
-                            {<br>
-                                //Выводим на экран<br>
-                                Text gt = gameObject.GetComponent<Text>();<br>
-                                gt.text = "High Score: " + score;<br>
                         
-                                //score увеличивается в другом скрипте здесь пишем её значение в PlayerPrefs если она больше чем HighScore<br>
-                                if(score > PlayerPrefs.GetInt("HighScore"))<br>
+                        
+                        public class SettingMenuScript : MonoBehaviour<br>
+                        {<br>
+                            [SerializeField] GameObject onMusic_Btn;<br>
+                            [SerializeField] GameObject onSound_Btn;<br>
+                        
+                        
+                        
+                            private void Start()<br>
+                            {<br>
+                                if (PlayerPrefs.HasKey("OnMusic"))<br>
                                 {<br>
-                                    PlayerPrefs.SetInt("HighScore", score);<br>
+                                    OnMusicBtnChangeColor();<br>
+                                    OnSoundBtnChangeColor();<br>
                                 }<br>
+                                onMusic += OnMusicBtnChangeColor;<br>
+                                onSound += OnSoundBtnChangeColor;<br>
+                        
                             }<br>
-                        }
+                            #region Events<br>
+                            public delegate void SettingsMenu();<br>
+                            public event SettingsMenu onMusic;<br>
+                            public event SettingsMenu onSound;<br>
+                        
+                            #endregion<br>
+                        
+                            #region Buttons<br>
+                            //кнопка OnMusic<br>
+                            public void OnMusic()<br>
+                            {<br>
+                                onMusic?.Invoke();<br>
+                            }<br>
+                            //кнопка OnSound<br>
+                            public void OnSound()<br>
+                            {<br>
+                                onSound?.Invoke();<br>
+                            }<br>
+                        
+                            #endregion<br>
+                            public void OnMusicBtnChangeColor()<br>
+                            {<br>
+                                
+                                if(PlayerPrefs.GetString("OnMusic") == "Yes")<br>
+                                {<br>
+                                    onMusic_Btn.GetComponent<Image>().color = Color.green;<br>
+                                    
+                                }<br>
+                                else<br>
+                                {<br>
+                                    onMusic_Btn.GetComponent<Image>().color = Color.red;<br>
+                                }<br>
+                                
+                            }<br>
+                            public void OnSoundBtnChangeColor()<br>
+                            {<br>
+                        
+                                if (PlayerPrefs.GetString("OnSound") == "Yes")<br>
+                                {<br>
+                                    onSound_Btn.GetComponent<Image>().color = Color.green;<br>
+                        
+                                }<br>
+                                else<br>
+                                {<br>
+                                    onSound_Btn.GetComponent<Image>().color = Color.red;<br>
+                                }<br>
+                        
+                            }<br>
+                        }<br>
+                        
                     </h4>
                    
 

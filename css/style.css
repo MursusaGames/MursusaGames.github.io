@@ -214,20 +214,6 @@
     color: red;
     text-decoration: underline;
 }
-.second__icon2_animated {
-    -webkit-animation-name: heartbeat;
-    animation-name: heartbeat;
-    -webkit-animation-duration: 2s;
-    animation-duration: 2s;
-    -webkit-animation-timing-function: ease;
-    animation-timing-function: ease;
-    -webkit-animation-iteration-count: infinite;
-    animation-iteration-count: infinite;
-}
-.second__icon2_animated:hover {
-    -webkit-animation-play-state: paused;
-    animation-play-state: paused;
-}
 .consultation {
     min-height: 680px;
     padding: 100px 0 92px 0;
